@@ -38,26 +38,5 @@ modules:
       log:
         enable: 1
 
-# 注册用户免费体验时间，单位小时，0则没有
-FREE_TIER: 1
-
-# 通过邀请码注册免费体验时间，单位小时。0则没有
-AFF_TIME: 2
-
-# 佣金比例，0则不返佣，前端无推广有礼的tab。不影响之前的返现，但会影响之后注册的用户
-COMMISSION_RATE: 0.15
-
-# 最低提现金额
-ALLOWED_WITHDRAWAL: 40
-
 # 发卡地址。配置后，在用户兑换页（未登陆），用户选车页，用户聊天页都可以跳转发卡地址
 FAKA_URL: ""
-
-# 邮箱配置，必须配置，否则用户无法注册，无法重置密码
-MAIL_FROM: "" # 发件人邮箱
-MAIL_PASS: "" # 邮箱密码，一般不是登陆密码
-MAIL_HOST: "smtp.gmail.com" # 邮箱服务器地址
-MAIL_PORT: "587" # 邮箱服务器端口
-# 注册邮箱白名单。清空: 关闭白名单 有值: 开启白名单
-MAIL_WHITELIST: "@gmail.com,@yahoo.com,@hotmail.com,@outlook.com,@icloud.com,@163.com,@126.com,@qq.com,@foxmail.com"
-SITE_NAME: "" #站点名称，用于发送邮件的友好提示

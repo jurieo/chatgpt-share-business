@@ -1,4 +1,4 @@
-version: "3.8"
+version: '3.8'
 services:
   mysql:
     image: mysql:8
@@ -24,10 +24,10 @@ services:
       - ./data/redis/:/data/
 
   gpt-share-server:
-    image: jurieo/gpt-share-server:undefined #商业版标签是undefined，免费版是latest
+    image: jurieo/gpt-share-server:latest
     restart: always
     ports:
-      - 38300:8001
+      - 8300:8001
     environment:
       TZ: Asia/Shanghai # 指定时区
       # 接入网关地址
@@ -38,24 +38,21 @@ services:
       AUDIT_LIMIT_URL: "http://auditlimit:8080/audit_limit"
     volumes:
       - ./config.yaml:/app/config.yaml
-      - ./data/chatgpt-share-server/:/app/data/
-      - ./data/images:/app/resource/public/images/
-
+      - ./data/gpt-share-server/:/app/data/
     labels:
       - "com.centurylinklabs.watchtower.scope=xyhelper-chatgpt-share-server"
 
-  # 使用我二开的auditlimit可以按单个用户限制使用次数。
+ # 使用我二开的auditlimit可以按单个用户限制使用次数。
   auditlimit:
     image: jurieo/auditlimit
     restart: always
     # ports:
     #   - 9611:8080
     environment:
-      LIMIT: 40 # 限制每个userToken允许的次数
+      LIMIT: 40  # 限制每个userToken允许的次数
       PER: "3h" # 限制周期 1s, 1m, 1h, 1d, 1w, 1y
     labels:
       - "com.centurylinklabs.watchtower.scope=xyhelper-chatgpt-share-server"
-
   watchtower:
     image: containrrr/watchtower
     volumes:
