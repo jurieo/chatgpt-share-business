@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 services:
   mysql:
     image: mysql:8
@@ -42,14 +42,14 @@ services:
     labels:
       - "com.centurylinklabs.watchtower.scope=xyhelper-chatgpt-share-server"
 
- # 使用我二开的auditlimit可以按单个用户限制使用次数。
+  # 使用我二开的auditlimit可以按单个用户限制使用次数。
   auditlimit:
     image: jurieo/auditlimit
     restart: always
     # ports:
     #   - 9611:8080
     environment:
-      LIMIT: 40  # 限制每个userToken允许的次数
+      LIMIT: 40 # 限制每个userToken允许的次数
       PER: "3h" # 限制周期 1s, 1m, 1h, 1d, 1w, 1y
     labels:
       - "com.centurylinklabs.watchtower.scope=xyhelper-chatgpt-share-server"
@@ -57,7 +57,7 @@ services:
     image: containrrr/watchtower
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    command: --scope xyhelper-chatgpt-share-server --cleanup
+    command: --scope xyhelper-chatgpt-share-server --cleanup --interval 3600
     restart: always
     environment:
       - TZ=Asia/Shanghai
