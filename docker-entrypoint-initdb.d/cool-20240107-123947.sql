@@ -1,4 +1,4 @@
--- MySQL dump 10.13  Distrib 8.2.0, for Linux (aarch64)
+-- MySQL dump 10.13  Distrib 8.2.0, for Linux (x86_64)
 --
 -- Host: localhost    Database: cool
 -- ------------------------------------------------------
@@ -24,15 +24,15 @@ DROP TABLE IF EXISTS `base_eps_admin`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `base_eps_admin` (
   `id` bigint NOT NULL AUTO_INCREMENT,
-  `module` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `method` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `path` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `prefix` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `summary` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `tag` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `dts` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `module` longtext COLLATE utf8mb4_unicode_ci,
+  `method` longtext COLLATE utf8mb4_unicode_ci,
+  `path` longtext COLLATE utf8mb4_unicode_ci,
+  `prefix` longtext COLLATE utf8mb4_unicode_ci,
+  `summary` longtext COLLATE utf8mb4_unicode_ci,
+  `tag` longtext COLLATE utf8mb4_unicode_ci,
+  `dts` longtext COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8364 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=979 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +41,6 @@ CREATE TABLE `base_eps_admin` (
 
 LOCK TABLES `base_eps_admin` WRITE;
 /*!40000 ALTER TABLE `base_eps_admin` DISABLE KEYS */;
-INSERT INTO `base_eps_admin` VALUES (8234,'base','POST','/logout','/admin/base/comm','logout','',''),(8235,'base','GET','/permmenu','/admin/base/comm','permmenu','',''),(8236,'base','GET','/person','/admin/base/comm','person','',''),(8237,'base','POST','/personUpdate','/admin/base/comm','personUpdate','',''),(8238,'base','POST','/upload','/admin/base/comm','upload','',''),(8239,'base','GET','/uploadMode','/admin/base/comm','uploadMode','',''),(8240,'base','GET','/captcha','/admin/base/open','captcha','',''),(8241,'base','GET','/eps','/admin/base/open','eps','',''),(8242,'base','POST','/login','/admin/base/open','login','',''),(8243,'base','GET','/refreshToken','/admin/base/open','refreshToken','',''),(8244,'base','POST','/add','/admin/base/sys/department','add','',''),(8245,'base','POST','/delete','/admin/base/sys/department','delete','',''),(8246,'base','GET','/info','/admin/base/sys/department','info','',''),(8247,'base','POST','/list','/admin/base/sys/department','list','',''),(8248,'base','GET','/order','/admin/base/sys/department','order','',''),(8249,'base','POST','/page','/admin/base/sys/department','page','',''),(8250,'base','POST','/update','/admin/base/sys/department','update','',''),(8251,'base','POST','/add','/admin/base/sys/log','add','',''),(8252,'base','POST','/clear','/admin/base/sys/log','clear','',''),(8253,'base','POST','/delete','/admin/base/sys/log','delete','',''),(8254,'base','GET','/getKeep','/admin/base/sys/log','getKeep','',''),(8255,'base','GET','/info','/admin/base/sys/log','info','',''),(8256,'base','POST','/list','/admin/base/sys/log','list','',''),(8257,'base','POST','/page','/admin/base/sys/log','page','',''),(8258,'base','POST','/setKeep','/admin/base/sys/log','setKeep','',''),(8259,'base','POST','/update','/admin/base/sys/log','update','',''),(8260,'base','POST','/add','/admin/base/sys/menu','add','',''),(8261,'base','POST','/delete','/admin/base/sys/menu','delete','',''),(8262,'base','GET','/info','/admin/base/sys/menu','info','',''),(8263,'base','POST','/list','/admin/base/sys/menu','list','',''),(8264,'base','POST','/page','/admin/base/sys/menu','page','',''),(8265,'base','POST','/update','/admin/base/sys/menu','update','',''),(8266,'base','POST','/add','/admin/base/sys/param','add','',''),(8267,'base','POST','/delete','/admin/base/sys/param','delete','',''),(8268,'base','GET','/html','/admin/base/sys/param','html','',''),(8269,'base','GET','/info','/admin/base/sys/param','info','',''),(8270,'base','POST','/list','/admin/base/sys/param','list','',''),(8271,'base','POST','/page','/admin/base/sys/param','page','',''),(8272,'base','POST','/update','/admin/base/sys/param','update','',''),(8273,'base','POST','/add','/admin/base/sys/role','add','',''),(8274,'base','POST','/delete','/admin/base/sys/role','delete','',''),(8275,'base','GET','/info','/admin/base/sys/role','info','',''),(8276,'base','POST','/list','/admin/base/sys/role','list','',''),(8277,'base','POST','/page','/admin/base/sys/role','page','',''),(8278,'base','POST','/update','/admin/base/sys/role','update','',''),(8279,'base','POST','/add','/admin/base/sys/user','add','',''),(8280,'base','POST','/delete','/admin/base/sys/user','delete','',''),(8281,'base','GET','/info','/admin/base/sys/user','info','',''),(8282,'base','POST','/list','/admin/base/sys/user','list','',''),(8283,'base','GET','/move','/admin/base/sys/user','move','',''),(8284,'base','POST','/page','/admin/base/sys/user','page','',''),(8285,'base','POST','/update','/admin/base/sys/user','update','',''),(8286,'chatgpt','POST','/add','/admin/chatgpt/conversations','add','',''),(8287,'chatgpt','POST','/delete','/admin/chatgpt/conversations','delete','',''),(8288,'chatgpt','GET','/info','/admin/chatgpt/conversations','info','',''),(8289,'chatgpt','POST','/list','/admin/chatgpt/conversations','list','',''),(8290,'chatgpt','POST','/page','/admin/chatgpt/conversations','page','',''),(8291,'chatgpt','POST','/update','/admin/chatgpt/conversations','update','',''),(8292,'chatgpt','POST','/add','/admin/chatgpt/paylogs','add','',''),(8293,'chatgpt','POST','/delete','/admin/chatgpt/paylogs','delete','',''),(8294,'chatgpt','GET','/info','/admin/chatgpt/paylogs','info','',''),(8295,'chatgpt','POST','/list','/admin/chatgpt/paylogs','list','',''),(8296,'chatgpt','POST','/page','/admin/chatgpt/paylogs','page','',''),(8297,'chatgpt','POST','/update','/admin/chatgpt/paylogs','update','',''),(8298,'chatgpt','POST','/add','/admin/chatgpt/redemption','add','',''),(8299,'chatgpt','POST','/delete','/admin/chatgpt/redemption','delete','',''),(8300,'chatgpt','GET','/info','/admin/chatgpt/redemption','info','',''),(8301,'chatgpt','POST','/list','/admin/chatgpt/redemption','list','',''),(8302,'chatgpt','POST','/page','/admin/chatgpt/redemption','page','',''),(8303,'chatgpt','POST','/update','/admin/chatgpt/redemption','update','',''),(8304,'chatgpt','POST','/add','/admin/chatgpt/session','add','',''),(8305,'chatgpt','POST','/delete','/admin/chatgpt/session','delete','',''),(8306,'chatgpt','GET','/info','/admin/chatgpt/session','info','',''),(8307,'chatgpt','GET','/infobycarid','/admin/chatgpt/session','infobycarid','',''),(8308,'chatgpt','POST','/list','/admin/chatgpt/session','list','',''),(8309,'chatgpt','POST','/page','/admin/chatgpt/session','page','',''),(8310,'chatgpt','POST','/update','/admin/chatgpt/session','update','',''),(8311,'chatgpt','POST','/add','/admin/chatgpt/subtype','add','',''),(8312,'chatgpt','POST','/delete','/admin/chatgpt/subtype','delete','',''),(8313,'chatgpt','GET','/info','/admin/chatgpt/subtype','info','',''),(8314,'chatgpt','POST','/list','/admin/chatgpt/subtype','list','',''),(8315,'chatgpt','POST','/page','/admin/chatgpt/subtype','page','',''),(8316,'chatgpt','POST','/update','/admin/chatgpt/subtype','update','',''),(8317,'chatgpt','POST','/add','/admin/chatgpt/user','add','',''),(8318,'chatgpt','POST','/delete','/admin/chatgpt/user','delete','',''),(8319,'chatgpt','GET','/info','/admin/chatgpt/user','info','',''),(8320,'chatgpt','POST','/list','/admin/chatgpt/user','list','',''),(8321,'chatgpt','POST','/page','/admin/chatgpt/user','page','',''),(8322,'chatgpt','POST','/update','/admin/chatgpt/user','update','',''),(8323,'chatgpt','POST','/add','/admin/chatgpt/withdrawlogs','add','',''),(8324,'chatgpt','POST','/delete','/admin/chatgpt/withdrawlogs','delete','',''),(8325,'chatgpt','GET','/info','/admin/chatgpt/withdrawlogs','info','',''),(8326,'chatgpt','POST','/list','/admin/chatgpt/withdrawlogs','list','',''),(8327,'chatgpt','POST','/page','/admin/chatgpt/withdrawlogs','page','',''),(8328,'chatgpt','POST','/update','/admin/chatgpt/withdrawlogs','update','',''),(8329,'dict','POST','/add','/admin/dict/info','add','',''),(8330,'dict','POST','/data','/admin/dict/info','data','',''),(8331,'dict','POST','/delete','/admin/dict/info','delete','',''),(8332,'dict','GET','/info','/admin/dict/info','info','',''),(8333,'dict','POST','/list','/admin/dict/info','list','',''),(8334,'dict','POST','/page','/admin/dict/info','page','',''),(8335,'dict','POST','/update','/admin/dict/info','update','',''),(8336,'dict','POST','/add','/admin/dict/type','add','',''),(8337,'dict','POST','/delete','/admin/dict/type','delete','',''),(8338,'dict','GET','/info','/admin/dict/type','info','',''),(8339,'dict','POST','/list','/admin/dict/type','list','',''),(8340,'dict','POST','/page','/admin/dict/type','page','',''),(8341,'dict','POST','/update','/admin/dict/type','update','',''),(8342,'space','POST','/add','/admin/space/info','add','',''),(8343,'space','POST','/delete','/admin/space/info','delete','',''),(8344,'space','GET','/info','/admin/space/info','info','',''),(8345,'space','POST','/list','/admin/space/info','list','',''),(8346,'space','POST','/page','/admin/space/info','page','',''),(8347,'space','POST','/update','/admin/space/info','update','',''),(8348,'space','POST','/add','/admin/space/type','add','',''),(8349,'space','POST','/delete','/admin/space/type','delete','',''),(8350,'space','GET','/info','/admin/space/type','info','',''),(8351,'space','POST','/list','/admin/space/type','list','',''),(8352,'space','POST','/page','/admin/space/type','page','',''),(8353,'space','POST','/update','/admin/space/type','update','',''),(8354,'task','POST','/add','/admin/task/info','add','',''),(8355,'task','POST','/delete','/admin/task/info','delete','',''),(8356,'task','GET','/info','/admin/task/info','info','',''),(8357,'task','POST','/list','/admin/task/info','list','',''),(8358,'task','GET','/log','/admin/task/info','log','',''),(8359,'task','POST','/once','/admin/task/info','once','',''),(8360,'task','POST','/page','/admin/task/info','page','',''),(8361,'task','GET','/start','/admin/task/info','start','',''),(8362,'task','GET','/stop','/admin/task/info','stop','',''),(8363,'task','POST','/update','/admin/task/info','update','','');
 /*!40000 ALTER TABLE `base_eps_admin` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -54,13 +53,13 @@ DROP TABLE IF EXISTS `base_eps_app`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `base_eps_app` (
   `id` bigint NOT NULL AUTO_INCREMENT,
-  `module` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `method` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `path` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `prefix` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `summary` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `tag` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
-  `dts` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `module` longtext COLLATE utf8mb4_unicode_ci,
+  `method` longtext COLLATE utf8mb4_unicode_ci,
+  `path` longtext COLLATE utf8mb4_unicode_ci,
+  `prefix` longtext COLLATE utf8mb4_unicode_ci,
+  `summary` longtext COLLATE utf8mb4_unicode_ci,
+  `tag` longtext COLLATE utf8mb4_unicode_ci,
+  `dts` longtext COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -86,8 +85,8 @@ CREATE TABLE `base_sys_conf` (
   `createTime` datetime(3) NOT NULL COMMENT '创建时间',
   `updateTime` datetime(3) NOT NULL COMMENT '更新时间',
   `deleted_at` datetime(3) DEFAULT NULL,
-  `cKey` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `cValue` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `cKey` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `cValue` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   KEY `idx_base_sys_conf_c_key` (`cKey`),
   KEY `idx_base_sys_conf_deleted_at` (`deleted_at`)
@@ -115,7 +114,7 @@ CREATE TABLE `base_sys_department` (
   `createTime` datetime(3) NOT NULL COMMENT '创建时间',
   `updateTime` datetime(3) NOT NULL COMMENT '更新时间',
   `deleted_at` datetime(3) DEFAULT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `parentId` bigint DEFAULT NULL,
   `orderNum` int NOT NULL,
   PRIMARY KEY (`id`),
@@ -142,8 +141,8 @@ DROP TABLE IF EXISTS `base_sys_init`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `base_sys_init` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
-  `table` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `group` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `table` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `group` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   KEY `idx_base_sys_init_table` (`table`),
   KEY `idx_base_sys_init_group` (`group`)
@@ -173,17 +172,17 @@ CREATE TABLE `base_sys_log` (
   `updateTime` datetime(3) NOT NULL COMMENT '更新时间',
   `deleted_at` datetime(3) DEFAULT NULL,
   `userId` bigint unsigned DEFAULT NULL,
-  `action` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `ip` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `ipAddr` varchar(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `params` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `action` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ip` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `ipAddr` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `params` longtext COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`id`),
   KEY `idx_base_sys_log_deleted_at` (`deleted_at`),
   KEY `IDX_51a2caeb5713efdfcb343a8772` (`userId`),
   KEY `IDX_938f886fb40e163db174b7f6c3` (`action`),
   KEY `IDX_24e18767659f8c7142580893f2` (`ip`),
   KEY `IDX_a03a27f75cf8d502b3060823e1` (`ipAddr`)
-) ENGINE=InnoDB AUTO_INCREMENT=1486 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=216 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -208,18 +207,18 @@ CREATE TABLE `base_sys_menu` (
   `updateTime` datetime(3) NOT NULL COMMENT '更新时间',
   `deleted_at` datetime(3) DEFAULT NULL,
   `parentId` bigint DEFAULT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `router` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `perms` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `router` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `perms` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `type` int NOT NULL,
-  `icon` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `icon` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `orderNum` int NOT NULL DEFAULT '0',
-  `viewPath` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `viewPath` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `keepAlive` int NOT NULL DEFAULT '1',
   `isShow` int NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`),
   KEY `idx_base_sys_menu_deleted_at` (`deleted_at`)
-) ENGINE=InnoDB AUTO_INCREMENT=270 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=228 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -228,7 +227,7 @@ CREATE TABLE `base_sys_menu` (
 
 LOCK TABLES `base_sys_menu` WRITE;
 /*!40000 ALTER TABLE `base_sys_menu` DISABLE KEYS */;
-INSERT INTO `base_sys_menu` VALUES (1,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,NULL,'工作台','/',NULL,0,'icon-workbench',1,NULL,1,1),(2,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,NULL,'系统管理','/sys',NULL,0,'icon-system',2,NULL,1,1),(8,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,27,'菜单列表','/sys/menu',NULL,1,'icon-menu',2,'cool/modules/base/views/menu.vue',1,1),(10,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,8,'新增',NULL,'base:sys:menu:add',2,NULL,1,NULL,0,1),(11,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,8,'删除',NULL,'base:sys:menu:delete',2,NULL,2,NULL,0,1),(12,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,8,'修改',NULL,'base:sys:menu:update',2,NULL,3,NULL,0,1),(13,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,8,'查询',NULL,'base:sys:menu:page,base:sys:menu:list,base:sys:menu:info',2,NULL,4,NULL,0,1),(22,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,27,'角色列表','/sys/role',NULL,1,'icon-common',3,'cool/modules/base/views/role.vue',1,1),(23,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,22,'新增',NULL,'base:sys:role:add',2,NULL,1,NULL,0,1),(24,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,22,'删除',NULL,'base:sys:role:delete',2,NULL,2,NULL,0,1),(25,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,22,'修改',NULL,'base:sys:role:update',2,NULL,3,NULL,0,1),(26,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,22,'查询',NULL,'base:sys:role:page,base:sys:role:list,base:sys:role:info',2,NULL,4,NULL,0,1),(27,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,2,'权限管理',NULL,NULL,0,'icon-auth',1,NULL,0,1),(29,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,105,'请求日志','/sys/log',NULL,1,'icon-log',1,'cool/modules/base/views/log.vue',1,1),(30,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,29,'权限',NULL,'base:sys:log:page,base:sys:log:clear,base:sys:log:getKeep,base:sys:log:setKeep',2,NULL,1,NULL,0,1),(59,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,97,'部门列表',NULL,'base:sys:department:list',2,NULL,0,NULL,1,1),(60,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,97,'新增部门',NULL,'base:sys:department:add',2,NULL,0,NULL,1,1),(61,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,97,'更新部门',NULL,'base:sys:department:update',2,NULL,0,NULL,1,1),(62,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,97,'删除部门',NULL,'base:sys:department:delete',2,NULL,0,NULL,1,1),(63,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,97,'部门排序',NULL,'base:sys:department:order',2,NULL,0,NULL,1,1),(65,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,97,'用户转移',NULL,'base:sys:user:move',2,NULL,0,NULL,1,1),(78,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,2,'参数配置',NULL,NULL,0,'icon-common',4,NULL,1,1),(79,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,78,'参数列表','/sys/param',NULL,1,'icon-menu',0,'cool/modules/base/views/param.vue',1,1),(80,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,79,'新增',NULL,'base:sys:param:add',2,NULL,0,NULL,1,1),(81,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,79,'修改',NULL,'base:sys:param:info,base:sys:param:update',2,NULL,0,NULL,1,1),(82,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,79,'删除',NULL,'base:sys:param:delete',2,NULL,0,NULL,1,1),(83,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,79,'查看',NULL,'base:sys:param:page,base:sys:param:list,base:sys:param:info',2,NULL,0,NULL,1,1),(84,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,NULL,'通用',NULL,NULL,0,'icon-radioboxfill',99,NULL,1,0),(85,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,84,'图片上传',NULL,'space:info:page,space:info:list,space:info:info,space:info:add,space:info:delete,space:info:update,space:type:page,space:type:list,space:type:info,space:type:add,space:type:delete,space:type:update',2,NULL,1,NULL,1,1),(90,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,84,'客服聊天',NULL,'base:app:im:message:read,base:app:im:message:page,base:app:im:session:page,base:app:im:session:list,base:app:im:session:unreadCount,base:app:im:session:delete',2,NULL,0,NULL,1,1),(97,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,27,'用户列表','/sys/user',NULL,1,'icon-user',0,'cool/modules/base/views/user.vue',1,1),(98,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,97,'新增',NULL,'base:sys:user:add',2,NULL,0,NULL,1,1),(99,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,97,'删除',NULL,'base:sys:user:delete',2,NULL,0,NULL,1,1),(100,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,97,'修改',NULL,'base:sys:user:delete,base:sys:user:update',2,NULL,0,NULL,1,1),(101,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,97,'查询',NULL,'base:sys:user:page,base:sys:user:list,base:sys:user:info',2,NULL,0,NULL,1,1),(105,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,2,'监控管理',NULL,NULL,0,'icon-rank',6,NULL,1,1),(117,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,NULL,'任务管理',NULL,NULL,0,'icon-activity',5,NULL,1,1),(118,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,117,'任务列表','/task',NULL,1,'icon-menu',0,'cool/modules/task/views/task.vue',1,1),(119,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,118,'权限',NULL,'task:info:page,task:info:list,task:info:info,task:info:add,task:info:delete,task:info:update,task:info:stop,task:info:start,task:info:once,task:info:log',2,NULL,0,NULL,1,1),(197,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,NULL,'字典管理',NULL,NULL,0,'icon-log',3,NULL,1,1),(198,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,197,'字典列表','/dict/list',NULL,1,'icon-menu',1,'modules/dict/views/list.vue',1,1),(199,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,198,'删除',NULL,'dict:info:delete',2,NULL,0,NULL,1,1),(200,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,198,'修改',NULL,'dict:info:update,dict:info:info',2,NULL,0,NULL,1,1),(201,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,198,'获得字典数据',NULL,'dict:info:data',2,NULL,0,NULL,1,1),(202,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,198,'单个信息',NULL,'dict:info:info',2,NULL,0,NULL,1,1),(203,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,198,'列表查询',NULL,'dict:info:list',2,NULL,0,NULL,1,1),(204,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,198,'分页查询',NULL,'dict:info:page',2,NULL,0,NULL,1,1),(205,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,198,'新增',NULL,'dict:info:add',2,NULL,0,NULL,1,1),(206,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,198,'组权限',NULL,'dict:type:list,dict:type:update,dict:type:delete,dict:type:add',2,NULL,0,NULL,1,1),(207,'2024-01-01 19:37:47.375','2024-01-01 19:37:47.375',NULL,1,'账号管理','/chatgpt/session',NULL,1,'icon-command',1,'modules/chatgpt/views/session.vue',1,1),(208,'2024-01-01 19:37:48.749','2024-01-01 19:37:48.749',NULL,207,'add',NULL,'chatgpt:session:add',2,NULL,0,NULL,1,1),(209,'2024-01-01 19:37:48.749','2024-01-01 19:37:48.749',NULL,207,'delete',NULL,'chatgpt:session:delete',2,NULL,0,NULL,1,1),(210,'2024-01-01 19:37:48.749','2024-01-01 19:37:48.749',NULL,207,'info',NULL,'chatgpt:session:info',2,NULL,0,NULL,1,1),(211,'2024-01-01 19:37:48.749','2024-01-01 19:37:48.749',NULL,207,'list',NULL,'chatgpt:session:list',2,NULL,0,NULL,1,1),(212,'2024-01-01 19:37:48.749','2024-01-01 19:37:48.749',NULL,207,'page',NULL,'chatgpt:session:page',2,NULL,0,NULL,1,1),(213,'2024-01-01 19:37:48.749','2024-01-01 19:37:48.749',NULL,207,'update',NULL,'chatgpt:session:update,chatgpt:session:info',2,NULL,0,NULL,1,1),(214,'2024-01-01 19:53:18.214','2024-01-01 19:53:18.214',NULL,1,'用户管理','/chatgpt/user',NULL,1,'icon-user',2,'modules/chatgpt/views/user.vue',1,1),(215,'2024-01-01 19:53:19.581','2024-01-01 19:53:19.581',NULL,214,'add',NULL,'chatgpt:user:add',2,NULL,0,NULL,1,1),(216,'2024-01-01 19:53:19.581','2024-01-01 19:53:19.581',NULL,214,'delete',NULL,'chatgpt:user:delete',2,NULL,0,NULL,1,1),(217,'2024-01-01 19:53:19.581','2024-01-01 19:53:19.581',NULL,214,'info',NULL,'chatgpt:user:info',2,NULL,0,NULL,1,1),(218,'2024-01-01 19:53:19.581','2024-01-01 19:53:19.581',NULL,214,'list',NULL,'chatgpt:user:list',2,NULL,0,NULL,1,1),(219,'2024-01-01 19:53:19.581','2024-01-01 19:53:19.581',NULL,214,'page',NULL,'chatgpt:user:page',2,NULL,0,NULL,1,1),(220,'2024-01-01 19:53:19.581','2024-01-01 19:53:19.581',NULL,214,'update',NULL,'chatgpt:user:update,chatgpt:user:info',2,NULL,0,NULL,1,1),(221,'2024-01-07 12:29:55.677','2024-01-07 12:29:55.677',NULL,1,'会话管理','/chatgpt/conversations',NULL,1,'icon-menu',3,'modules/chatgpt/views/conversations.vue',1,1),(222,'2024-01-07 12:29:57.263','2024-01-07 12:29:57.263',NULL,221,'add',NULL,'chatgpt:conversations:add',2,NULL,0,NULL,1,1),(223,'2024-01-07 12:29:57.263','2024-01-07 12:29:57.263',NULL,221,'delete',NULL,'chatgpt:conversations:delete',2,NULL,0,NULL,1,1),(224,'2024-01-07 12:29:57.263','2024-01-07 12:29:57.263',NULL,221,'info',NULL,'chatgpt:conversations:info',2,NULL,0,NULL,1,1),(225,'2024-01-07 12:29:57.263','2024-01-07 12:29:57.263',NULL,221,'list',NULL,'chatgpt:conversations:list',2,NULL,0,NULL,1,1),(226,'2024-01-07 12:29:57.263','2024-01-07 12:29:57.263',NULL,221,'page',NULL,'chatgpt:conversations:page',2,NULL,0,NULL,1,1),(227,'2024-01-07 12:29:57.263','2024-01-07 12:29:57.263',NULL,221,'update',NULL,'chatgpt:conversations:update,chatgpt:conversations:info',2,NULL,0,NULL,1,1),(228,'2024-02-17 19:50:42.000','2024-02-17 20:05:02.067',NULL,1,'订阅类型','/chatgpt/subtype',NULL,1,'icon-card',4,'modules/chatgpt/views/subtype.vue',1,1),(229,'2024-02-17 19:50:42.846','2024-02-17 19:50:42.846',NULL,228,'add',NULL,'chatgpt:subtype:add',2,NULL,0,NULL,1,1),(230,'2024-02-17 19:50:42.846','2024-02-17 19:50:42.846',NULL,228,'delete',NULL,'chatgpt:subtype:delete',2,NULL,0,NULL,1,1),(231,'2024-02-17 19:50:42.846','2024-02-17 19:50:42.846',NULL,228,'info',NULL,'chatgpt:subtype:info',2,NULL,0,NULL,1,1),(232,'2024-02-17 19:50:42.846','2024-02-17 19:50:42.846',NULL,228,'list',NULL,'chatgpt:subtype:list',2,NULL,0,NULL,1,1),(233,'2024-02-17 19:50:42.846','2024-02-17 19:50:42.846',NULL,228,'page',NULL,'chatgpt:subtype:page',2,NULL,0,NULL,1,1),(234,'2024-02-17 19:50:42.846','2024-02-17 19:50:42.846',NULL,228,'update',NULL,'chatgpt:subtype:update,chatgpt:subtype:info',2,NULL,0,NULL,1,1),(235,'2024-02-17 20:02:33.386','2024-02-17 20:02:33.386',NULL,1,'兑换码','/chatgpt/redemption',NULL,1,'icon-command',5,'modules/chatgpt/views/redemption.vue',1,1),(236,'2024-02-17 20:02:33.523','2024-02-17 20:02:33.523',NULL,235,'add',NULL,'chatgpt:redemption:add',2,NULL,0,NULL,1,1),(237,'2024-02-17 20:02:33.523','2024-02-17 20:02:33.523',NULL,235,'delete',NULL,'chatgpt:redemption:delete',2,NULL,0,NULL,1,1),(238,'2024-02-17 20:02:33.523','2024-02-17 20:02:33.523',NULL,235,'info',NULL,'chatgpt:redemption:info',2,NULL,0,NULL,1,1),(239,'2024-02-17 20:02:33.523','2024-02-17 20:02:33.523',NULL,235,'list',NULL,'chatgpt:redemption:list',2,NULL,0,NULL,1,1),(240,'2024-02-17 20:02:33.523','2024-02-17 20:02:33.523',NULL,235,'page',NULL,'chatgpt:redemption:page',2,NULL,0,NULL,1,1),(241,'2024-02-17 20:02:33.523','2024-02-17 20:02:33.523',NULL,235,'update',NULL,'chatgpt:redemption:update,chatgpt:redemption:info',2,NULL,0,NULL,1,1),(242,'2024-02-17 21:45:26.610','2024-02-17 21:45:26.610','2024-02-17 21:57:37.863',1,'兑换记录','/chatgpt/paylogs',NULL,1,'icon-log',6,'modules/chatgpt/views/paylogs.vue',1,1),(243,'2024-02-17 21:45:26.751','2024-02-17 21:45:26.751','2024-02-17 21:57:37.866',242,'add',NULL,'chatgpt:paylogs:add',2,NULL,0,NULL,1,1),(244,'2024-02-17 21:45:26.751','2024-02-17 21:45:26.751','2024-02-17 21:57:37.866',242,'delete',NULL,'chatgpt:paylogs:delete',2,NULL,0,NULL,1,1),(245,'2024-02-17 21:45:26.751','2024-02-17 21:45:26.751','2024-02-17 21:57:37.866',242,'info',NULL,'chatgpt:paylogs:info',2,NULL,0,NULL,1,1),(246,'2024-02-17 21:45:26.751','2024-02-17 21:45:26.751','2024-02-17 21:57:37.866',242,'list',NULL,'chatgpt:paylogs:list',2,NULL,0,NULL,1,1),(247,'2024-02-17 21:45:26.751','2024-02-17 21:45:26.751','2024-02-17 21:57:37.866',242,'page',NULL,'chatgpt:paylogs:page',2,NULL,0,NULL,1,1),(248,'2024-02-17 21:45:26.751','2024-02-17 21:45:26.751','2024-02-17 21:57:37.866',242,'update',NULL,'chatgpt:paylogs:update,chatgpt:paylogs:info',2,NULL,0,NULL,1,1),(249,'2024-02-17 21:58:08.860','2024-02-17 21:58:08.860','2024-02-17 22:01:17.658',1,'兑换记录','/chatgpt/paylogs',NULL,1,'icon-log',5,'modules/chatgpt/views/paylogs.vue',1,1),(250,'2024-02-17 21:58:09.022','2024-02-17 21:58:09.022','2024-02-17 22:01:17.661',249,'add',NULL,'chatgpt:paylogs:add',2,NULL,0,NULL,1,1),(251,'2024-02-17 21:58:09.022','2024-02-17 21:58:09.022','2024-02-17 22:01:17.661',249,'delete',NULL,'chatgpt:paylogs:delete',2,NULL,0,NULL,1,1),(252,'2024-02-17 21:58:09.022','2024-02-17 21:58:09.022','2024-02-17 22:01:17.661',249,'info',NULL,'chatgpt:paylogs:info',2,NULL,0,NULL,1,1),(253,'2024-02-17 21:58:09.022','2024-02-17 21:58:09.022','2024-02-17 22:01:17.661',249,'list',NULL,'chatgpt:paylogs:list',2,NULL,0,NULL,1,1),(254,'2024-02-17 21:58:09.022','2024-02-17 21:58:09.022','2024-02-17 22:01:17.661',249,'page',NULL,'chatgpt:paylogs:page',2,NULL,0,NULL,1,1),(255,'2024-02-17 21:58:09.022','2024-02-17 21:58:09.022','2024-02-17 22:01:17.661',249,'update',NULL,'chatgpt:paylogs:update,chatgpt:paylogs:info',2,NULL,0,NULL,1,1),(256,'2024-02-17 21:58:35.151','2024-02-17 21:58:35.151',NULL,1,'提现记录','/chatgpt/withdrawlogs',NULL,1,'icon-wallet',6,'modules/chatgpt/views/withdrawlogs.vue',1,1),(257,'2024-02-17 21:58:35.325','2024-02-17 21:58:35.325',NULL,256,'add',NULL,'chatgpt:withdrawlogs:add',2,NULL,0,NULL,1,1),(258,'2024-02-17 21:58:35.325','2024-02-17 21:58:35.325',NULL,256,'delete',NULL,'chatgpt:withdrawlogs:delete',2,NULL,0,NULL,1,1),(259,'2024-02-17 21:58:35.325','2024-02-17 21:58:35.325',NULL,256,'info',NULL,'chatgpt:withdrawlogs:info',2,NULL,0,NULL,1,1),(260,'2024-02-17 21:58:35.325','2024-02-17 21:58:35.325',NULL,256,'list',NULL,'chatgpt:withdrawlogs:list',2,NULL,0,NULL,1,1),(261,'2024-02-17 21:58:35.325','2024-02-17 21:58:35.325',NULL,256,'page',NULL,'chatgpt:withdrawlogs:page',2,NULL,0,NULL,1,1),(262,'2024-02-17 21:58:35.325','2024-02-17 21:58:35.325',NULL,256,'update',NULL,'chatgpt:withdrawlogs:update,chatgpt:withdrawlogs:info',2,NULL,0,NULL,1,1),(263,'2024-02-17 22:01:36.942','2024-02-17 22:01:36.942',NULL,1,'兑换记录','/chatgpt/paylogs',NULL,1,'icon-log',5,'modules/chatgpt/views/paylogs.vue',1,1),(264,'2024-02-17 22:01:37.076','2024-02-17 22:01:37.076',NULL,263,'add',NULL,'chatgpt:paylogs:add',2,NULL,0,NULL,1,1),(265,'2024-02-17 22:01:37.076','2024-02-17 22:01:37.076',NULL,263,'delete',NULL,'chatgpt:paylogs:delete',2,NULL,0,NULL,1,1),(266,'2024-02-17 22:01:37.076','2024-02-17 22:01:37.076',NULL,263,'info',NULL,'chatgpt:paylogs:info',2,NULL,0,NULL,1,1),(267,'2024-02-17 22:01:37.076','2024-02-17 22:01:37.076',NULL,263,'list',NULL,'chatgpt:paylogs:list',2,NULL,0,NULL,1,1),(268,'2024-02-17 22:01:37.076','2024-02-17 22:01:37.076',NULL,263,'page',NULL,'chatgpt:paylogs:page',2,NULL,0,NULL,1,1),(269,'2024-02-17 22:01:37.076','2024-02-17 22:01:37.076',NULL,263,'update',NULL,'chatgpt:paylogs:update,chatgpt:paylogs:info',2,NULL,0,NULL,1,1);
+INSERT INTO `base_sys_menu` VALUES (1,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,NULL,'工作台','/',NULL,0,'icon-workbench',1,NULL,1,1),(2,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,NULL,'系统管理','/sys',NULL,0,'icon-system',2,NULL,1,1),(8,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,27,'菜单列表','/sys/menu',NULL,1,'icon-menu',2,'cool/modules/base/views/menu.vue',1,1),(10,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,8,'新增',NULL,'base:sys:menu:add',2,NULL,1,NULL,0,1),(11,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,8,'删除',NULL,'base:sys:menu:delete',2,NULL,2,NULL,0,1),(12,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,8,'修改',NULL,'base:sys:menu:update',2,NULL,3,NULL,0,1),(13,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,8,'查询',NULL,'base:sys:menu:page,base:sys:menu:list,base:sys:menu:info',2,NULL,4,NULL,0,1),(22,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,27,'角色列表','/sys/role',NULL,1,'icon-common',3,'cool/modules/base/views/role.vue',1,1),(23,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,22,'新增',NULL,'base:sys:role:add',2,NULL,1,NULL,0,1),(24,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,22,'删除',NULL,'base:sys:role:delete',2,NULL,2,NULL,0,1),(25,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,22,'修改',NULL,'base:sys:role:update',2,NULL,3,NULL,0,1),(26,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,22,'查询',NULL,'base:sys:role:page,base:sys:role:list,base:sys:role:info',2,NULL,4,NULL,0,1),(27,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,2,'权限管理',NULL,NULL,0,'icon-auth',1,NULL,0,1),(29,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,105,'请求日志','/sys/log',NULL,1,'icon-log',1,'cool/modules/base/views/log.vue',1,1),(30,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,29,'权限',NULL,'base:sys:log:page,base:sys:log:clear,base:sys:log:getKeep,base:sys:log:setKeep',2,NULL,1,NULL,0,1),(59,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,97,'部门列表',NULL,'base:sys:department:list',2,NULL,0,NULL,1,1),(60,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,97,'新增部门',NULL,'base:sys:department:add',2,NULL,0,NULL,1,1),(61,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,97,'更新部门',NULL,'base:sys:department:update',2,NULL,0,NULL,1,1),(62,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,97,'删除部门',NULL,'base:sys:department:delete',2,NULL,0,NULL,1,1),(63,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,97,'部门排序',NULL,'base:sys:department:order',2,NULL,0,NULL,1,1),(65,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,97,'用户转移',NULL,'base:sys:user:move',2,NULL,0,NULL,1,1),(78,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,2,'参数配置',NULL,NULL,0,'icon-common',4,NULL,1,1),(79,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,78,'参数列表','/sys/param',NULL,1,'icon-menu',0,'cool/modules/base/views/param.vue',1,1),(80,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,79,'新增',NULL,'base:sys:param:add',2,NULL,0,NULL,1,1),(81,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,79,'修改',NULL,'base:sys:param:info,base:sys:param:update',2,NULL,0,NULL,1,1),(82,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,79,'删除',NULL,'base:sys:param:delete',2,NULL,0,NULL,1,1),(83,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,79,'查看',NULL,'base:sys:param:page,base:sys:param:list,base:sys:param:info',2,NULL,0,NULL,1,1),(84,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,NULL,'通用',NULL,NULL,0,'icon-radioboxfill',99,NULL,1,0),(85,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,84,'图片上传',NULL,'space:info:page,space:info:list,space:info:info,space:info:add,space:info:delete,space:info:update,space:type:page,space:type:list,space:type:info,space:type:add,space:type:delete,space:type:update',2,NULL,1,NULL,1,1),(90,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,84,'客服聊天',NULL,'base:app:im:message:read,base:app:im:message:page,base:app:im:session:page,base:app:im:session:list,base:app:im:session:unreadCount,base:app:im:session:delete',2,NULL,0,NULL,1,1),(97,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,27,'用户列表','/sys/user',NULL,1,'icon-user',0,'cool/modules/base/views/user.vue',1,1),(98,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,97,'新增',NULL,'base:sys:user:add',2,NULL,0,NULL,1,1),(99,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,97,'删除',NULL,'base:sys:user:delete',2,NULL,0,NULL,1,1),(100,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,97,'修改',NULL,'base:sys:user:delete,base:sys:user:update',2,NULL,0,NULL,1,1),(101,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,97,'查询',NULL,'base:sys:user:page,base:sys:user:list,base:sys:user:info',2,NULL,0,NULL,1,1),(105,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,2,'监控管理',NULL,NULL,0,'icon-rank',6,NULL,1,1),(117,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,NULL,'任务管理',NULL,NULL,0,'icon-activity',5,NULL,1,1),(118,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,117,'任务列表','/task',NULL,1,'icon-menu',0,'cool/modules/task/views/task.vue',1,1),(119,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,118,'权限',NULL,'task:info:page,task:info:list,task:info:info,task:info:add,task:info:delete,task:info:update,task:info:stop,task:info:start,task:info:once,task:info:log',2,NULL,0,NULL,1,1),(197,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,NULL,'字典管理',NULL,NULL,0,'icon-log',3,NULL,1,1),(198,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,197,'字典列表','/dict/list',NULL,1,'icon-menu',1,'modules/dict/views/list.vue',1,1),(199,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,198,'删除',NULL,'dict:info:delete',2,NULL,0,NULL,1,1),(200,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,198,'修改',NULL,'dict:info:update,dict:info:info',2,NULL,0,NULL,1,1),(201,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,198,'获得字典数据',NULL,'dict:info:data',2,NULL,0,NULL,1,1),(202,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,198,'单个信息',NULL,'dict:info:info',2,NULL,0,NULL,1,1),(203,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,198,'列表查询',NULL,'dict:info:list',2,NULL,0,NULL,1,1),(204,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,198,'分页查询',NULL,'dict:info:page',2,NULL,0,NULL,1,1),(205,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,198,'新增',NULL,'dict:info:add',2,NULL,0,NULL,1,1),(206,'2024-01-01 13:14:56.605','2024-01-01 13:14:56.605',NULL,198,'组权限',NULL,'dict:type:list,dict:type:update,dict:type:delete,dict:type:add',2,NULL,0,NULL,1,1),(207,'2024-01-01 19:37:47.375','2024-01-01 19:37:47.375',NULL,1,'账号管理','/chatgpt/session',NULL,1,'icon-command',1,'modules/chatgpt/views/session.vue',1,1),(208,'2024-01-01 19:37:48.749','2024-01-01 19:37:48.749',NULL,207,'add',NULL,'chatgpt:session:add',2,NULL,0,NULL,1,1),(209,'2024-01-01 19:37:48.749','2024-01-01 19:37:48.749',NULL,207,'delete',NULL,'chatgpt:session:delete',2,NULL,0,NULL,1,1),(210,'2024-01-01 19:37:48.749','2024-01-01 19:37:48.749',NULL,207,'info',NULL,'chatgpt:session:info',2,NULL,0,NULL,1,1),(211,'2024-01-01 19:37:48.749','2024-01-01 19:37:48.749',NULL,207,'list',NULL,'chatgpt:session:list',2,NULL,0,NULL,1,1),(212,'2024-01-01 19:37:48.749','2024-01-01 19:37:48.749',NULL,207,'page',NULL,'chatgpt:session:page',2,NULL,0,NULL,1,1),(213,'2024-01-01 19:37:48.749','2024-01-01 19:37:48.749',NULL,207,'update',NULL,'chatgpt:session:update,chatgpt:session:info',2,NULL,0,NULL,1,1),(214,'2024-01-01 19:53:18.214','2024-01-01 19:53:18.214',NULL,1,'用户管理','/chatgpt/user',NULL,1,'icon-user',2,'modules/chatgpt/views/user.vue',1,1),(215,'2024-01-01 19:53:19.581','2024-01-01 19:53:19.581',NULL,214,'add',NULL,'chatgpt:user:add',2,NULL,0,NULL,1,1),(216,'2024-01-01 19:53:19.581','2024-01-01 19:53:19.581',NULL,214,'delete',NULL,'chatgpt:user:delete',2,NULL,0,NULL,1,1),(217,'2024-01-01 19:53:19.581','2024-01-01 19:53:19.581',NULL,214,'info',NULL,'chatgpt:user:info',2,NULL,0,NULL,1,1),(218,'2024-01-01 19:53:19.581','2024-01-01 19:53:19.581',NULL,214,'list',NULL,'chatgpt:user:list',2,NULL,0,NULL,1,1),(219,'2024-01-01 19:53:19.581','2024-01-01 19:53:19.581',NULL,214,'page',NULL,'chatgpt:user:page',2,NULL,0,NULL,1,1),(220,'2024-01-01 19:53:19.581','2024-01-01 19:53:19.581',NULL,214,'update',NULL,'chatgpt:user:update,chatgpt:user:info',2,NULL,0,NULL,1,1),(221,'2024-01-07 12:29:55.677','2024-01-07 12:29:55.677',NULL,1,'会话管理','/chatgpt/conversations',NULL,1,'icon-menu',3,'modules/chatgpt/views/conversations.vue',1,1),(222,'2024-01-07 12:29:57.263','2024-01-07 12:29:57.263',NULL,221,'add',NULL,'chatgpt:conversations:add',2,NULL,0,NULL,1,1),(223,'2024-01-07 12:29:57.263','2024-01-07 12:29:57.263',NULL,221,'delete',NULL,'chatgpt:conversations:delete',2,NULL,0,NULL,1,1),(224,'2024-01-07 12:29:57.263','2024-01-07 12:29:57.263',NULL,221,'info',NULL,'chatgpt:conversations:info',2,NULL,0,NULL,1,1),(225,'2024-01-07 12:29:57.263','2024-01-07 12:29:57.263',NULL,221,'list',NULL,'chatgpt:conversations:list',2,NULL,0,NULL,1,1),(226,'2024-01-07 12:29:57.263','2024-01-07 12:29:57.263',NULL,221,'page',NULL,'chatgpt:conversations:page',2,NULL,0,NULL,1,1),(227,'2024-01-07 12:29:57.263','2024-01-07 12:29:57.263',NULL,221,'update',NULL,'chatgpt:conversations:update,chatgpt:conversations:info',2,NULL,0,NULL,1,1);
 /*!40000 ALTER TABLE `base_sys_menu` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -244,15 +243,15 @@ CREATE TABLE `base_sys_param` (
   `createTime` datetime(3) NOT NULL COMMENT '创建时间',
   `updateTime` datetime(3) NOT NULL COMMENT '更新时间',
   `deleted_at` datetime(3) DEFAULT NULL,
-  `keyName` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `data` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `keyName` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `data` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `dataType` int NOT NULL DEFAULT '0',
-  `remark` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `remark` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `idx_base_sys_param_deleted_at` (`deleted_at`),
   KEY `IDX_cf19b5e52d8c71caa9c4534454` (`keyName`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -261,7 +260,7 @@ CREATE TABLE `base_sys_param` (
 
 LOCK TABLES `base_sys_param` WRITE;
 /*!40000 ALTER TABLE `base_sys_param` DISABLE KEYS */;
-INSERT INTO `base_sys_param` VALUES (1,'2024-01-01 13:14:58.771','2024-01-01 13:14:58.771',NULL,'text','富文本参数','<p><strong class=\"ql-size-huge\">111xxxxx2222<span class=\"ql-cursor\">﻿﻿</span></strong></p>',0,NULL),(2,'2024-01-01 13:14:58.771','2024-01-01 13:14:58.771',NULL,'json','JSON参数','{\n    code: 111\n}',0,NULL),(3,'2024-02-15 19:08:28.597','2024-02-15 19:08:28.597',NULL,'notice','公告','<p style=\"text-align: center;\"><strong>这里是公告啊啊啊啊啊啊</strong></p>',0,NULL);
+INSERT INTO `base_sys_param` VALUES (1,'2024-01-01 13:14:58.771','2024-01-01 13:14:58.771',NULL,'text','富文本参数','<p><strong class=\"ql-size-huge\">111xxxxx2222<span class=\"ql-cursor\">﻿﻿</span></strong></p>',0,NULL),(2,'2024-01-01 13:14:58.771','2024-01-01 13:14:58.771',NULL,'json','JSON参数','{\n    code: 111\n}',0,NULL);
 /*!40000 ALTER TABLE `base_sys_param` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -277,10 +276,10 @@ CREATE TABLE `base_sys_role` (
   `createTime` datetime(3) NOT NULL COMMENT '创建时间',
   `updateTime` datetime(3) NOT NULL COMMENT '更新时间',
   `deleted_at` datetime(3) DEFAULT NULL,
-  `userId` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `label` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `remark` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `userId` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `label` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `remark` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `relevance` int NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`),
   KEY `idx_base_sys_role_deleted_at` (`deleted_at`),
@@ -370,23 +369,23 @@ CREATE TABLE `base_sys_user` (
   `updateTime` datetime(3) NOT NULL COMMENT '更新时间',
   `deleted_at` datetime(3) DEFAULT NULL,
   `departmentId` bigint DEFAULT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `username` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `username` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `passwordV` int NOT NULL DEFAULT '1',
-  `nickName` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `headImg` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `phone` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `nickName` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `headImg` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phone` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `status` int NOT NULL DEFAULT '1',
-  `remark` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `socketId` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `remark` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `socketId` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `idx_base_sys_user_deleted_at` (`deleted_at`),
   KEY `idx_base_sys_user_department_id` (`departmentId`),
   KEY `idx_base_sys_user_username` (`username`),
   KEY `idx_base_sys_user_phone` (`phone`)
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -440,17 +439,16 @@ CREATE TABLE `chatgpt_conversations` (
   `createTime` datetime(3) NOT NULL COMMENT '创建时间',
   `updateTime` datetime(3) NOT NULL COMMENT '更新时间',
   `deleted_at` datetime(3) DEFAULT NULL,
-  `userToken` longtext COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'UserToken',
+  `usertoken` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '用户token',
   `convid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '会话id',
-  `title` text COLLATE utf8mb4_unicode_ci COMMENT '会话标题',
+  `title` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '会话标题',
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '官网账号邮箱',
-  `content` longtext COLLATE utf8mb4_unicode_ci COMMENT '对话内容',
-  `chatgptaccountid` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'ChatGPT-Account-ID',
   PRIMARY KEY (`id`),
   KEY `idx_chatgpt_conversations_conv_id` (`convid`),
   KEY `idx_chatgpt_conversations_email` (`email`),
-  KEY `idx_chatgpt_conversations_deleted_at` (`deleted_at`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  KEY `idx_chatgpt_conversations_deleted_at` (`deleted_at`),
+  KEY `idx_chatgpt_conversations_user_token` (`usertoken`)
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -460,71 +458,6 @@ CREATE TABLE `chatgpt_conversations` (
 LOCK TABLES `chatgpt_conversations` WRITE;
 /*!40000 ALTER TABLE `chatgpt_conversations` DISABLE KEYS */;
 /*!40000 ALTER TABLE `chatgpt_conversations` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `chatgpt_paylogs`
---
-
-DROP TABLE IF EXISTS `chatgpt_paylogs`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `chatgpt_paylogs` (
-  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
-  `createTime` datetime(3) NOT NULL COMMENT '创建时间',
-  `updateTime` datetime(3) NOT NULL COMMENT '更新时间',
-  `deleted_at` datetime(3) DEFAULT NULL,
-  `userId` longtext COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '支付者Id',
-  `inviterId` bigint DEFAULT NULL COMMENT '邀请人的Id',
-  `money` longtext COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '支付金额',
-  `redemptionKey` longtext COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '兑换码',
-  `subTypeId` bigint NOT NULL DEFAULT '0' COMMENT '用户订阅类型id',
-  `remark` longtext COLLATE utf8mb4_unicode_ci COMMENT '备注',
-  PRIMARY KEY (`id`),
-  KEY `idx_chatgpt_paylogs_deleted_at` (`deleted_at`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `chatgpt_paylogs`
---
-
-LOCK TABLES `chatgpt_paylogs` WRITE;
-/*!40000 ALTER TABLE `chatgpt_paylogs` DISABLE KEYS */;
-/*!40000 ALTER TABLE `chatgpt_paylogs` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `chatgpt_redemption`
---
-
-DROP TABLE IF EXISTS `chatgpt_redemption`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `chatgpt_redemption` (
-  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
-  `createTime` datetime(3) NOT NULL COMMENT '创建时间',
-  `updateTime` datetime(3) NOT NULL COMMENT '更新时间',
-  `deleted_at` datetime(3) DEFAULT NULL,
-  `userId` bigint NOT NULL COMMENT '创建用户id',
-  `key` longtext COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'key',
-  `status` bigint NOT NULL COMMENT '状态',
-  `subTypeId` bigint NOT NULL COMMENT '订阅类型',
-  `redeemedTime` datetime(3) DEFAULT NULL COMMENT '兑换时间',
-  `usedUserId` longtext COLLATE utf8mb4_unicode_ci COMMENT '使用者',
-  `remark` longtext COLLATE utf8mb4_unicode_ci COMMENT '备注',
-  PRIMARY KEY (`id`),
-  KEY `idx_chatgpt_redemption_deleted_at` (`deleted_at`)
-) ENGINE=InnoDB AUTO_INCREMENT=70 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `chatgpt_redemption`
---
-
-LOCK TABLES `chatgpt_redemption` WRITE;
-/*!40000 ALTER TABLE `chatgpt_redemption` DISABLE KEYS */;
-/*!40000 ALTER TABLE `chatgpt_redemption` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -539,51 +472,25 @@ CREATE TABLE `chatgpt_session` (
   `createTime` datetime(3) NOT NULL COMMENT '创建时间',
   `updateTime` datetime(3) NOT NULL COMMENT '更新时间',
   `deleted_at` datetime(3) DEFAULT NULL,
-  `email` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '邮箱',
-  `password` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '密码',
+  `email` longtext COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '邮箱',
+  `password` longtext COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '密码',
   `status` tinyint(1) DEFAULT '0' COMMENT '状态',
   `isPlus` tinyint(1) DEFAULT '0' COMMENT 'PLUS',
-  `carID` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '展示ID',
-  `officialSession` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci COMMENT '官方session',
-  `remark` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci COMMENT '备注',
+  `carID` longtext COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '展示ID',
+  `officialSession` longtext COLLATE utf8mb4_unicode_ci COMMENT '官方session',
+  `remark` longtext COLLATE utf8mb4_unicode_ci COMMENT '备注',
   PRIMARY KEY (`id`),
   KEY `idx_chatgpt_session_deleted_at` (`deleted_at`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `chatgpt_session`
 --
 
---
--- Table structure for table `chatgpt_subtype`
---
-
-DROP TABLE IF EXISTS `chatgpt_subtype`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `chatgpt_subtype` (
-  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
-  `createTime` datetime(3) NOT NULL COMMENT '创建时间',
-  `updateTime` datetime(3) NOT NULL COMMENT '更新时间',
-  `deleted_at` datetime(3) DEFAULT NULL,
-  `name` longtext COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '名称',
-  `remark` longtext COLLATE utf8mb4_unicode_ci COMMENT '备注',
-  `money` longtext COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '订阅金额',
-  `validDays` bigint NOT NULL COMMENT '有效天数',
-  PRIMARY KEY (`id`),
-  KEY `idx_chatgpt_subtype_deleted_at` (`deleted_at`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `chatgpt_subtype`
---
-
-LOCK TABLES `chatgpt_subtype` WRITE;
-/*!40000 ALTER TABLE `chatgpt_subtype` DISABLE KEYS */;
-INSERT INTO `chatgpt_subtype` VALUES (1,'2024-02-17 16:37:14.000','2024-02-17 16:37:14.000',NULL,'日付',NULL,'5',1),(2,'2024-02-17 16:37:14.000','2024-02-17 16:37:14.000',NULL,'周付',NULL,'20',7),(3,'2024-02-17 16:37:14.000','2024-02-17 16:37:14.000',NULL,'半月付',NULL,'40',15),(4,'2024-02-17 16:37:14.000','2024-02-17 16:37:14.000',NULL,'月付',NULL,'60',30),(5,'2024-02-17 16:37:14.000','2024-02-17 16:37:14.000',NULL,'月付（独享）',NULL,'285',30);
-/*!40000 ALTER TABLE `chatgpt_subtype` ENABLE KEYS */;
+LOCK TABLES `chatgpt_session` WRITE;
+/*!40000 ALTER TABLE `chatgpt_session` DISABLE KEYS */;
+/*!40000 ALTER TABLE `chatgpt_session` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -599,27 +506,12 @@ CREATE TABLE `chatgpt_user` (
   `updateTime` datetime(3) NOT NULL COMMENT '更新时间',
   `deleted_at` datetime(3) DEFAULT NULL,
   `userToken` longtext COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'UserToken',
-  `password` longtext COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '密码',
-  `expireTime` datetime(3) DEFAULT NULL COMMENT '过期时间',
+  `expireTime` datetime(3) NOT NULL COMMENT '过期时间',
   `isPlus` tinyint(1) DEFAULT '0' COMMENT 'PLUS',
-  `isAdmin` tinyint(1) DEFAULT '0' COMMENT '是否为管理员',
   `remark` longtext COLLATE utf8mb4_unicode_ci COMMENT '备注',
-  `sessionId` longtext COLLATE utf8mb4_unicode_ci COMMENT 'sessionId',
-  `email` longtext COLLATE utf8mb4_unicode_ci COMMENT 'email',
-  `limit` bigint DEFAULT '20' COMMENT '限制',
-  `per` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT '1h' COMMENT '时间段',
-  `subTypeId` bigint DEFAULT '0' COMMENT '用户订阅类型id',
-  `affCode` longtext COLLATE utf8mb4_unicode_ci COMMENT '推广码',
-  `affQuota` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT '0' COMMENT '可提现金额',
-  `affHistoryQuota` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT '0' COMMENT '推广已提现金额',
-  `affTotalQuota` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT '0' COMMENT '推广总金额',
-  `affCount` bigint DEFAULT '0' COMMENT '推广人数',
-  `receiptFile` longtext COLLATE utf8mb4_unicode_ci COMMENT '收款码',
-  `status` bigint DEFAULT '1' COMMENT '状态',
-  `inviterId` bigint DEFAULT NULL COMMENT '邀请人的Id',
   PRIMARY KEY (`id`),
   KEY `idx_chatgpt_user_deleted_at` (`deleted_at`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -629,36 +521,6 @@ CREATE TABLE `chatgpt_user` (
 LOCK TABLES `chatgpt_user` WRITE;
 /*!40000 ALTER TABLE `chatgpt_user` DISABLE KEYS */;
 /*!40000 ALTER TABLE `chatgpt_user` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `chatgpt_withdrawlogs`
---
-
-DROP TABLE IF EXISTS `chatgpt_withdrawlogs`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `chatgpt_withdrawlogs` (
-  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
-  `createTime` datetime(3) NOT NULL COMMENT '创建时间',
-  `updateTime` datetime(3) NOT NULL COMMENT '更新时间',
-  `deleted_at` datetime(3) DEFAULT NULL,
-  `userId` longtext COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '提现者Id',
-  `money` bigint NOT NULL COMMENT '提现金额',
-  `remark` longtext COLLATE utf8mb4_unicode_ci COMMENT '备注',
-  `status` bigint NOT NULL COMMENT '提现状态',
-  PRIMARY KEY (`id`),
-  KEY `idx_chatgpt_withdrawlogs_deleted_at` (`deleted_at`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `chatgpt_withdrawlogs`
---
-
-LOCK TABLES `chatgpt_withdrawlogs` WRITE;
-/*!40000 ALTER TABLE `chatgpt_withdrawlogs` DISABLE KEYS */;
-/*!40000 ALTER TABLE `chatgpt_withdrawlogs` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -674,9 +536,9 @@ CREATE TABLE `dict_info` (
   `updateTime` datetime(3) NOT NULL COMMENT '更新时间',
   `deleted_at` datetime(3) DEFAULT NULL,
   `typeId` int NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `orderNum` int NOT NULL,
-  `remark` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `remark` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `parentId` int DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `idx_dict_info_deleted_at` (`deleted_at`)
@@ -705,8 +567,8 @@ CREATE TABLE `dict_type` (
   `createTime` datetime(3) NOT NULL COMMENT '创建时间',
   `updateTime` datetime(3) NOT NULL COMMENT '更新时间',
   `deleted_at` datetime(3) DEFAULT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   KEY `idx_dict_type_deleted_at` (`deleted_at`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -734,8 +596,8 @@ CREATE TABLE `space_info` (
   `createTime` datetime(3) NOT NULL COMMENT '创建时间',
   `updateTime` datetime(3) NOT NULL COMMENT '更新时间',
   `deleted_at` datetime(3) DEFAULT NULL,
-  `url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '地址',
-  `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '类型',
+  `url` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '地址',
+  `type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '类型',
   `classifyId` bigint DEFAULT NULL COMMENT '分类ID',
   PRIMARY KEY (`id`),
   KEY `idx_space_info_deleted_at` (`deleted_at`)
@@ -763,7 +625,7 @@ CREATE TABLE `space_type` (
   `createTime` datetime(3) NOT NULL COMMENT '创建时间',
   `updateTime` datetime(3) NOT NULL COMMENT '更新时间',
   `deleted_at` datetime(3) DEFAULT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '类别名称 ',
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '类别名称 ',
   `parentId` int DEFAULT NULL COMMENT '父分类ID',
   PRIMARY KEY (`id`),
   KEY `idx_space_type_deleted_at` (`deleted_at`)
@@ -791,18 +653,18 @@ CREATE TABLE `task_info` (
   `createTime` datetime(3) NOT NULL COMMENT '创建时间',
   `updateTime` datetime(3) NOT NULL COMMENT '更新时间',
   `deleted_at` datetime(3) DEFAULT NULL,
-  `jobId` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '任务ID',
-  `repeatConf` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci COMMENT '重复配置',
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '任务名称',
-  `cron` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'cron表达式',
+  `jobId` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '任务ID',
+  `repeatConf` longtext COLLATE utf8mb4_unicode_ci COMMENT '重复配置',
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '任务名称',
+  `cron` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'cron表达式',
   `limit` bigint DEFAULT NULL COMMENT '限制次数 不传为不限制',
   `every` bigint DEFAULT NULL COMMENT '间隔时间 单位秒',
-  `remark` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '备注',
+  `remark` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '备注',
   `status` bigint DEFAULT NULL COMMENT '状态 0:关闭 1:开启',
   `startDate` datetime(3) DEFAULT NULL COMMENT '开始时间',
   `endDate` datetime(3) DEFAULT NULL COMMENT '结束时间',
-  `data` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '数据',
-  `service` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '执行的服务',
+  `data` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '数据',
+  `service` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '执行的服务',
   `type` bigint DEFAULT NULL COMMENT '类型 0:系统 1:用户',
   `nextRunTime` datetime(3) DEFAULT NULL COMMENT '下次执行时间',
   `taskType` bigint DEFAULT NULL COMMENT '任务类型 0:cron 1:时间间隔',
@@ -817,7 +679,7 @@ CREATE TABLE `task_info` (
 
 LOCK TABLES `task_info` WRITE;
 /*!40000 ALTER TABLE `task_info` DISABLE KEYS */;
-INSERT INTO `task_info` VALUES (1,'2024-01-01 13:15:00.083','2024-02-28 17:04:38.081',NULL,NULL,NULL,'清理日志','1 2 3 * * *',NULL,NULL,'每天03:02:01执行清理缓存任务',1,NULL,NULL,NULL,'BaseFuncClearLog(false)',0,'2024-02-29 03:02:01.000',0);
+INSERT INTO `task_info` VALUES (1,'2024-01-01 13:15:00.083','2024-01-07 12:29:21.604',NULL,NULL,NULL,'清理日志','1 2 3 * * *',NULL,NULL,'每天03:02:01执行清理缓存任务',1,NULL,NULL,NULL,'BaseFuncClearLog(false)',0,'2024-01-08 03:02:01.000',0);
 /*!40000 ALTER TABLE `task_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -835,10 +697,10 @@ CREATE TABLE `task_log` (
   `deleted_at` datetime(3) DEFAULT NULL,
   `taskId` bigint unsigned DEFAULT NULL COMMENT '任务ID',
   `status` tinyint unsigned NOT NULL COMMENT '状态 0:失败 1:成功',
-  `detail` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci COMMENT '详情',
+  `detail` longtext COLLATE utf8mb4_unicode_ci COMMENT '详情',
   PRIMARY KEY (`id`),
   KEY `idx_task_log_deleted_at` (`deleted_at`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -847,7 +709,7 @@ CREATE TABLE `task_log` (
 
 LOCK TABLES `task_log` WRITE;
 /*!40000 ALTER TABLE `task_log` DISABLE KEYS */;
-INSERT INTO `task_log` VALUES (1,'2024-01-07 03:02:02.293','2024-01-07 03:02:02.293',NULL,1,1,'任务执行成功'),(2,'2024-02-23 03:02:02.089','2024-02-23 03:02:02.089',NULL,1,1,'任务执行成功');
+INSERT INTO `task_log` VALUES (1,'2024-01-07 03:02:02.293','2024-01-07 03:02:02.293',NULL,1,1,'任务执行成功');
 /*!40000 ALTER TABLE `task_log` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -860,4 +722,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-02-28 17:06:13
+-- Dump completed on 2024-01-07 12:39:49
