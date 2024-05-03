@@ -2,7 +2,7 @@ version: "3.8"
 services:
   mysql:
     image: mysql:8
-    command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    command: --mysql-native-password=ON --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     restart: always
     volumes:
       - ./data/mysql/:/var/lib/mysql/
@@ -41,6 +41,9 @@ services:
       - ./data/gpt-share-server/:/app/data/
     labels:
       - "com.centurylinklabs.watchtower.scope=jurieo-chatgpt-share-web"
+    depends_on:
+      - mysql
+      - redis
 
   # 使用我二开的auditlimit可以按单个用户限制使用次数。
   auditlimit:
