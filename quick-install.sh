@@ -3,6 +3,23 @@ set -e
 
 ## 克隆仓库到本地
 echo "clone repository..."
+
+# 检测 Docker 是否已安装
+if ! command -v docker &> /dev/null; then
+    echo "检测到没有安装docker，开始安装..."
+    # 使用 curl 命令下载 Docker 安装脚本并执行
+    curl -fsSL https://get.docker.com | sh
+    
+    # 检查 Docker 是否安装成功
+    if command -v docker &> /dev/null; then
+        echo "Docker 安装成功."
+    else
+        echo "Docker 安装失败，请执行 curl -fsSL https://get.docker.com | sh 手动安装 Docker 后再试一次."
+    fi
+else
+    echo "Docker 已安装。开始克隆仓库..."
+fi
+
 git clone -b deploy-free --depth=1 https://github.com/jurieo/chatgpt-share-web.git chatgpt-share-web
 
 local_ipv4=$(curl -s4m8 http://ip.sb)
