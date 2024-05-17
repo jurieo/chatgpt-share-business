@@ -39,6 +39,7 @@ services:
     volumes:
       - ./config.yaml:/app/config.yaml
       - ./data/gpt-share-server/:/app/data/
+      - ./data/chatgpt-share-server/images:/app/public/uploads
     labels:
       - "com.centurylinklabs.watchtower.scope=jurieo-chatgpt-share-web"
     depends_on:
